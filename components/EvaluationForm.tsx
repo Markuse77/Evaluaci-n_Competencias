@@ -1,7 +1,8 @@
+
 import React, { useState, useEffect, useRef } from 'react';
-import { EVALUATION_OPTIONS } from '../constants';
-import { FormAnswer } from '../App';
-import Card from './Card';
+import { EVALUATION_OPTIONS } from '../constants.ts';
+import { FormAnswer } from '../App.tsx';
+import Card from './Card.tsx';
 
 interface EvaluationFormProps {
   behaviors: string[];
@@ -146,6 +147,9 @@ const EvaluationForm: React.FC<EvaluationFormProps> = ({ behaviors, onSubmit }) 
       </div>
     </Card>
   );
+};
+
+export default EvaluationForm;
 };
 
 export default EvaluationForm;
