@@ -1,4 +1,5 @@
-import { User, EvaluationResult } from '../types';
+
+import { User, EvaluationResult } from '../types.ts';
 
 // IMPORTANT: This is the correct URL provided by the user.
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyyrswCypKJexmG8g7yt0m89IANEhmV1CgZ5kI9UbH3kkJ4gdimKJqaoC96ZroVkFVQ/exec';
