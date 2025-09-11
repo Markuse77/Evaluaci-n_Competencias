@@ -1,14 +1,15 @@
+
 import React, { useState, useCallback } from 'react';
-import { User, EvaluationResult } from './types';
-import { BEHAVIORS, EVALUATION_OPTIONS } from './constants';
-import { fetchUserById } from './services/userService';
-import { saveEvaluation } from './services/evaluationService';
-import Login from './components/Login';
-import Welcome from './components/Welcome';
-import Instructions from './components/Instructions';
-import EvaluationForm from './components/EvaluationForm';
-import Results from './components/Results';
-import Header from './components/Header';
+import { User, EvaluationResult } from './types.ts';
+import { BEHAVIORS, EVALUATION_OPTIONS } from './constants.ts';
+import { fetchUserById } from './services/userService.ts';
+import { saveEvaluation } from './services/evaluationService.ts';
+import Login from './components/Login.tsx';
+import Welcome from './components/Welcome.tsx';
+import Instructions from './components/Instructions.tsx';
+import EvaluationForm from './components/EvaluationForm.tsx';
+import Results from './components/Results.tsx';
+import Header from './components/Header.tsx';
 
 type View = 'login' | 'welcome' | 'instructions' | 'evaluation' | 'results';
 export type FormAnswer = { score: number; justification: string };
