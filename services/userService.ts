@@ -1,4 +1,5 @@
-import { User, ChargeLevel } from '../types';
+
+import { User, ChargeLevel } from '../types.ts';
 
 // New URL for the published Google Sheet, exported as CSV
 const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRAp02geyYNznRwUhpttM7usC2XWAbhgJarNY5OOi9gj6JnDV9HZrxEwtt7GEbAfonOL9eiFJh0owxD/pub?gid=0&single=true&output=csv';
