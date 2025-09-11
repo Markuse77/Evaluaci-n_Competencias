@@ -1,6 +1,7 @@
+
 import React from 'react';
-import { User } from '../types';
-import Card from './Card';
+import { User } from '../types.ts';
+import Card from './Card.tsx';
 
 interface WelcomeProps {
   user: User;
