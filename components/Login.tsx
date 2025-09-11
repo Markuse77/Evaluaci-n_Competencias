@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
-import Card from './Card';
-import Loader from './Loader';
+import Card from './Card.tsx';
+import Loader from './Loader.tsx';
 
 interface LoginProps {
   onLogin: (id: string) => void;
@@ -45,6 +46,9 @@ const Login: React.FC<LoginProps> = ({ onLogin, error, isLoading }) => {
       </div>
     </Card>
   );
+};
+
+export default Login;
 };
 
 export default Login;
