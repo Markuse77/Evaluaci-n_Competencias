@@ -26,7 +26,7 @@
         },
       }
     </script>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.1.1",
@@ -43,10 +43,10 @@
   <body class="bg-brand-light">
     <div id="root"></div>
     
-    <!-- Use compatible versions of SystemJS and babel plugin -->
+    <!-- Use compatible versions of SystemJS and babel plugin from a CORS-friendly CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.21.6/system.js"></script>
-    <script src="https://unpkg.com/systemjs-plugin-babel@0.0.25/plugin-babel.min.js"></script>
-    <script src="https://unpkg.com/systemjs-plugin-babel@0.0.25/systemjs-babel-browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs-plugin-babel/0.0.25/plugin-babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs-plugin-babel/0.0.25/systemjs-babel-browser.min.js"></script>
 
     <!-- SystemJS Configuration and App Entry Point -->
     <script>
@@ -67,23 +67,20 @@
             '*.ts': { loader: 'plugin-babel' }
         },
         map: {
-          'plugin-babel': 'https://unpkg.com/systemjs-plugin-babel@0.0.25/plugin-babel.min.js',
-          'systemjs-babel-build': 'https://unpkg.com/systemjs-plugin-babel@0.0.25/systemjs-babel-browser.min.js',
+          'plugin-babel': 'https://cdnjs.cloudflare.com/ajax/libs/systemjs-plugin-babel/0.0.25/plugin-babel.min.js',
+          'systemjs-babel-build': 'https://cdnjs.cloudflare.com/ajax/libs/systemjs-plugin-babel/0.0.25/systemjs-babel-browser.min.js',
           
-          'react': 'https://unpkg.com/react@18.2.0/umd/react.production.min.js',
-          'react-dom': 'https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js',
+          'react': 'https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js',
+          'react-dom': 'https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js',
           
-          'recharts': 'https://unpkg.com/recharts@2.12.7/umd/Recharts.min.js',
-          'jspdf': 'https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js',
-          'html2canvas': 'https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js',
+          'recharts': 'https://cdnjs.cloudflare.com/ajax/libs/recharts/2.12.7/Recharts.min.js',
+          'jspdf': 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js',
+          'html2canvas': 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js',
           '@google/genai': 'https://esm.sh/@google/genai@0.14.0?target=systemjs'
         }
       });
       
       System.import('./index').catch(function(err){ console.error(err); });
-    </script>
-  </body>
-</html>
     </script>
   </body>
 </html>
