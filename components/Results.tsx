@@ -1,7 +1,8 @@
+
 import React, { useState, useRef } from 'react';
-import { User, EvaluationResult } from '../types';
-import Card from './Card';
-import Loader from './Loader';
+import { User, EvaluationResult } from '../types.ts';
+import Card from './Card.tsx';
+import Loader from './Loader.tsx';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
