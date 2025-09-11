@@ -49,6 +49,3 @@ const Login: React.FC<LoginProps> = ({ onLogin, error, isLoading }) => {
 };
 
 export default Login;
-};
-
-export default Login;

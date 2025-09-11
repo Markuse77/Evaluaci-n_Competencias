@@ -150,6 +150,3 @@ const EvaluationForm: React.FC<EvaluationFormProps> = ({ behaviors, onSubmit }) 
 };
 
 export default EvaluationForm;
-};
-
-export default EvaluationForm;
