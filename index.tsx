@@ -1,4 +1,5 @@
 import React from 'react';
+// Fix: For React 18, createRoot is imported from 'react-dom/client'
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 
@@ -7,7 +8,8 @@ if (!rootElement) {
   throw new Error("Could not find root element to mount to");
 }
 
-// Fix: Updated to React 18's createRoot API. The `ReactDOM.render` method is deprecated.
+// Fix: Use the createRoot API which is standard for React 18.
+// The `render` API is deprecated and has been removed from the main 'react-dom' package.
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
