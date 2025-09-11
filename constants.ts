@@ -1,4 +1,5 @@
-import { ChargeLevel } from './types';
+
+import { ChargeLevel } from './types.ts';
 
 export const BEHAVIORS: { [key in ChargeLevel]: string[] } = {
   [ChargeLevel.DIRECTIVO]: [
