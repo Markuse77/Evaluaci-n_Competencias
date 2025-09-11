@@ -26,61 +26,28 @@
         },
       }
     </script>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.1.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.2.0",
-    "jspdf": "https://aistudiocdn.com/jspdf@^3.0.2",
-    "html2canvas": "https://aistudiocdn.com/html2canvas@^1.4.1"
-  }
-}
-</script>
-</head>
+    <!-- Platform-provided importmap for dependencies -->
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.1.1",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+        "react/": "https://aistudiocdn.com/react@^19.1.1/",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0",
+        "recharts": "https://aistudiocdn.com/recharts@^3.2.0",
+        "jspdf": "https://aistudiocdn.com/jspdf@^3.0.2",
+        "html2canvas": "https://aistudiocdn.com/html2canvas@^1.4.1"
+      }
+    }
+    </script>
+    
+    <!-- Babel Standalone for in-browser transpilation of TSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
   <body class="bg-brand-light">
     <div id="root"></div>
     
-    <!-- Use compatible versions of SystemJS and babel plugin from a CORS-friendly CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.21.6/system.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs-plugin-babel/0.0.25/plugin-babel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs-plugin-babel/0.0.25/systemjs-babel-browser.min.js"></script>
-
-    <!-- SystemJS Configuration and App Entry Point -->
-    <script>
-      System.config({
-        transpiler: 'plugin-babel',
-        babelOptions: {
-          presets: ["react", "typescript"]
-        },
-        packages: {
-          './': { defaultExtension: 'tsx' },
-          './components': { defaultExtension: 'tsx' },
-          './services': { defaultExtension: 'ts' },
-          './types': { defaultExtension: 'ts' },
-          './constants': { defaultExtension: 'ts' }
-        },
-        meta: {
-            '*.tsx': { loader: 'plugin-babel' },
-            '*.ts': { loader: 'plugin-babel' }
-        },
-        map: {
-          'plugin-babel': 'https://cdnjs.cloudflare.com/ajax/libs/systemjs-plugin-babel/0.0.25/plugin-babel.min.js',
-          'systemjs-babel-build': 'https://cdnjs.cloudflare.com/ajax/libs/systemjs-plugin-babel/0.0.25/systemjs-babel-browser.min.js',
-          
-          'react': 'https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js',
-          'react-dom': 'https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js',
-          
-          'recharts': 'https://cdnjs.cloudflare.com/ajax/libs/recharts/2.12.7/Recharts.min.js',
-          'jspdf': 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js',
-          'html2canvas': 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js',
-          '@google/genai': 'https://esm.sh/@google/genai@0.14.0?target=systemjs'
-        }
-      });
-      
-      System.import('./index').catch(function(err){ console.error(err); });
-    </script>
+    <!-- Main entry point script, marked for Babel to transpile with necessary presets -->
+    <script type="text/babel" data-presets="react,typescript" src="./index.tsx" data-type="module"></script>
   </body>
 </html>
